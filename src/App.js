@@ -13,9 +13,7 @@ function App() {
 
   // Function To Change theme
   function themeHandler() {
-    let pageTheme = document.documentElement
-
-    if (pageTheme.className === 'light-theme') {
+    if (theme === 'light-theme') {
       setTheme('dark-theme')
     } else {
       setTheme('light-theme')
