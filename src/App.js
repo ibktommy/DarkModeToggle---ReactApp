@@ -10,12 +10,24 @@ function App() {
   useEffect(() => {
     document.documentElement.className = theme
   }, [theme])
+
+  // Function To Change theme
+  function themeHandler() {
+    let pageTheme = document.documentElement
+
+    if (pageTheme.className === 'light-theme') {
+      setTheme('dark-theme')
+    } else {
+      setTheme('light-theme')
+    }
+  }
+
   return (
     <main>
       <nav>
         <div className="nav-center">
           <h1>Dark Mode Toggle</h1>
-          <button className="btn">Toggle</button>
+          <button className="btn" onClick={themeHandler}>Toggle</button>
         </div>
       </nav>
 
