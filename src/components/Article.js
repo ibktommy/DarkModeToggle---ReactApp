@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Article = () => {
+const Article = ({ title, snippet, date, length }) => {
   return (
-    <div>Article</div>
+    <article className='post'>
+      <h2>{title}</h2>
+      <div className="post-info">
+        <span>date</span>
+        <span>{length} min read</span>
+      </div>
+      <p>{snippet}</p>
+    </article>
   )
 }
 
